@@ -42,3 +42,13 @@ select avg(salary),position
 from employee group by position 
 order by avg(salary) asc
 limit 1; -- find lowest salary -- use asc
+
+
+-- having clause
+
+use dummy;
+select * from employee;
+select count(*),position from employee group by position;
+
+select avg(salary),position from employee group by position having avg(salary)<60000;
+select avg(salary),position from employee group by position having avg(salary)>55000;
