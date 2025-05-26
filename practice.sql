@@ -68,3 +68,9 @@ select * from students order by finalgrade asc; -- sort students by finalgrade i
 drop table students; -- delete the students table
 
 select * from students;
+
+UPDATE Employee
+SET FIRST_NAME = CONCAT(
+    UPPER(LEFT(FIRST_NAME, 1)),
+    LOWER(SUBSTRING(FIRST_NAME, 2))
+); /* first litter only caps */
